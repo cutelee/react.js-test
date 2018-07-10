@@ -20,6 +20,9 @@ import { Login, Page404, Page500, Register } from './views/Pages';
 
 // import { renderRoutes } from 'react-router-config';
 
+import { Header, CommentContainer, PostContainer, MyNavbar } from './components';
+import { AppHeader, AppNavbarBrand, AppSidebarToggler } from '@coreui/react'
+
 class App extends Component {
   render() {
     return (
@@ -33,6 +36,21 @@ class App extends Component {
         </Switch>
       </HashRouter>
     );
+      /*<div className='app'>
+        <AppHeader fixed>
+          <AppSidebarToggler className="d-lg-none" display="md" mobile />
+          <AppNavbarBrand>
+            <Header className='Header'/>
+          </AppNavbarBrand>
+          <AppSidebarToggler className="d-md-down-none" display="lg" />
+        </AppHeader>
+
+        <div className='app-body'>
+          <div className='main'>
+
+          </div>
+        </div>
+      </div>*/
   }
 }
 

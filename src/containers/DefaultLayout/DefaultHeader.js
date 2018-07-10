@@ -21,51 +21,50 @@ class DefaultHeader extends Component {
     return (
       <React.Fragment>
         <AppSidebarToggler className="d-lg-none" display="md" mobile />
-        <AppNavbarBrand
-          full={{ src: logo, width: 89, height: 25, alt: 'CoreUI Logo' }}
-          minimized={{ src: sygnet, width: 30, height: 30, alt: 'CoreUI Logo' }}
-        />
+        <AppNavbarBrand><i className='cui-home' style={{marginRight: 5}}></i><strong>Test</strong> Page</AppNavbarBrand>
         <AppSidebarToggler className="d-md-down-none" display="lg" />
 
         <Nav className="d-md-down-none" navbar>
           <NavItem className="px-3">
-            <NavLink href="/">Dashboard</NavLink>
+            <NavLink href="/">
+            <i className='cui-home' style={{marginRight: 5}}></i>메인페이지</NavLink>
           </NavItem>
           <NavItem className="px-3">
-            <NavLink href="#/users">Users</NavLink>
+            <NavLink href="#/posts">
+            <i className='cui-pencil' style={{marginRight: 5}}></i>게시글</NavLink>
           </NavItem>
           <NavItem className="px-3">
-            <NavLink href="#">Settings</NavLink>
+            <NavLink href="#/comments">
+            <i className='cui-comment-square' style={{marginRight: 5}}></i>댓글</NavLink>
           </NavItem>
         </Nav>
         <Nav className="ml-auto" navbar>
           <NavItem className="d-md-down-none">
-            <NavLink href="#"><i className="icon-bell"></i><Badge pill color="danger">5</Badge></NavLink>
+            <NavLink href="#"><i className="cui-bell"></i><Badge pill color="primary">알림</Badge></NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
-            <NavLink href="#"><i className="icon-list"></i></NavLink>
+            <NavLink href="#"><i className="cui-list"></i></NavLink>
           </NavItem>
           <NavItem className="d-md-down-none">
-            <NavLink href="#"><i className="icon-location-pin"></i></NavLink>
+            <NavLink href="#"><i className="cui-location-pin"></i></NavLink>
           </NavItem>
           <AppHeaderDropdown direction="down">
             <DropdownToggle nav>
               <img src={'assets/img/avatars/6.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
             </DropdownToggle>
             <DropdownMenu right style={{ right: 'auto' }}>
-              <DropdownItem header tag="div" className="text-center"><strong>Account</strong></DropdownItem>
-              <DropdownItem><i className="fa fa-bell-o"></i> Updates<Badge color="info">42</Badge></DropdownItem>
-              <DropdownItem><i className="fa fa-envelope-o"></i> Messages<Badge color="success">42</Badge></DropdownItem>
-              <DropdownItem><i className="fa fa-tasks"></i> Tasks<Badge color="danger">42</Badge></DropdownItem>
-              <DropdownItem><i className="fa fa-comments"></i> Comments<Badge color="warning">42</Badge></DropdownItem>
-              <DropdownItem header tag="div" className="text-center"><strong>Settings</strong></DropdownItem>
-              <DropdownItem><i className="fa fa-user"></i> Profile</DropdownItem>
-              <DropdownItem><i className="fa fa-wrench"></i> Settings</DropdownItem>
-              <DropdownItem><i className="fa fa-usd"></i> Payments<Badge color="secondary">42</Badge></DropdownItem>
-              <DropdownItem><i className="fa fa-file"></i> Projects<Badge color="primary">42</Badge></DropdownItem>
+              <DropdownItem header tag="div" className="text-center"><strong>소제목 #1</strong></DropdownItem>
+              <DropdownItem><i className="fa fa-envelope-o"></i> 컨텐츠 #1<Badge color="info">알림개수</Badge></DropdownItem>
+              <DropdownItem><i className="fa fa-envelope-o"></i> 컨텐츠 #2<Badge color="success">알림개수</Badge></DropdownItem>
+              <DropdownItem><i className="fa fa-envelope-o"></i> 컨텐츠 #4<Badge color="warning">알림개수</Badge></DropdownItem>
+              <DropdownItem><i className="fa fa-envelope-o"></i> 컨텐츠 #3<Badge color="danger">알림개수</Badge></DropdownItem>
+              <DropdownItem header tag="div" className="text-center"><strong>소제목 #2</strong></DropdownItem>
+              <DropdownItem><i className="fa fa-envelope-o"></i> 컨텐츠 #1</DropdownItem>
+              <DropdownItem><i className="fa fa-envelope-o"></i> 컨텐츠 #2</DropdownItem>
+              <DropdownItem><i className="fa fa-envelope-o"></i> 컨텐츠 #3<Badge color="secondary">알림개수</Badge></DropdownItem>
+              <DropdownItem><i className="fa fa-envelope-o"></i> 컨텐츠 #4<Badge color="primary">알림개수</Badge></DropdownItem>
               <DropdownItem divider />
-              <DropdownItem><i className="fa fa-shield"></i> Lock Account</DropdownItem>
-              <DropdownItem><i className="fa fa-lock"></i> Logout</DropdownItem>
+              <DropdownItem><i className="cui-account-logout"></i> 로그아웃</DropdownItem>
             </DropdownMenu>
           </AppHeaderDropdown>
         </Nav>

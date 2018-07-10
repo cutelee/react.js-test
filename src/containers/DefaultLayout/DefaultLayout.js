@@ -29,6 +29,7 @@ class DefaultLayout extends Component {
         <AppHeader fixed>
           <DefaultHeader />
         </AppHeader>
+
         <div className="app-body">
           <AppSidebar fixed display="lg">
             <AppSidebarHeader />
@@ -37,6 +38,7 @@ class DefaultLayout extends Component {
             <AppSidebarFooter />
             <AppSidebarMinimizer />
           </AppSidebar>
+
           <main className="main">
             <AppBreadcrumb appRoutes={routes}/>
             <Container fluid>
@@ -52,10 +54,12 @@ class DefaultLayout extends Component {
               </Switch>
             </Container>
           </main>
+
           <AppAside fixed hidden>
             <DefaultAside />
           </AppAside>
         </div>
+
         <AppFooter>
           <DefaultFooter />
         </AppFooter>

@@ -1,6 +1,52 @@
 export default {
   items: [
     {
+      name: '메인페이지',
+      url: '/dashboard',
+      icon: 'cui-speedometer',
+      badge: {
+        variant: 'info',
+        text: '뱃지',
+      },
+    },
+    {
+      title: true,
+      name: '카테고리명',
+      wrapper: {            // optional wrapper object
+        element: '',        // required valid HTML5 element tag
+        attributes: {}        // optional valid JS object with JS API naming ex: { className: "my-class", style: { fontFamily: "Verdana" }, id: "my-id"}
+      },
+      class: ''             // optional class names space delimited list for title item ex: "text-center"
+    },
+    {
+      name: '네이버',
+      url: 'https://www.naver.com/',
+      icon: 'cui-drop',
+    },
+    {
+      name: '게시글, 댓글',
+      url: '/dashboard',
+      icon: 'cui-pencil',
+      children: [
+        {
+          name: '게시글',
+          url: '/posts',
+          icon: 'cui-puzzle',
+          badge: {
+            variant: 'danger',
+            text: '뱃지',
+          },
+        },
+        {
+          name: '댓글',
+          url: '/comments',
+          icon: 'cui-cursor',
+        },
+      ]
+    },
+
+    /*  template item
+    {
       name: 'Dashboard',
       url: '/dashboard',
       icon: 'icon-speedometer',
@@ -255,17 +301,18 @@ export default {
         },
       ],
     },
+    */
     {
-      name: 'Download CoreUI',
+      name: '바닥옵션 : "mt-auto"',
       url: 'http://coreui.io/react/',
-      icon: 'icon-cloud-download',
-      class: 'mt-auto',
-      variant: 'success',
+      icon: 'cui-cloud-download',
+      class: 'mt-auto',   // 바닥에 배치해줌
+      variant: 'primary',
     },
     {
-      name: 'Try CoreUI PRO',
+      name: "색상옵션 : 'danger'",
       url: 'http://coreui.io/pro/react/',
-      icon: 'icon-layers',
+      icon: 'cui-layers',
       variant: 'danger',
     },
   ],
