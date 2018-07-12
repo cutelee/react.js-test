@@ -21,8 +21,12 @@ class DefaultHeader extends Component {
     return (
       <React.Fragment>
         <AppSidebarToggler className="d-lg-none" display="md" mobile />
-        <AppNavbarBrand><i className='cui-home' style={{marginRight: 5}}></i><strong>Test</strong> Page</AppNavbarBrand>
+        {/*
+
         <AppSidebarToggler className="d-md-down-none" display="lg" />
+        */}
+        <AppNavbarBrand><i className='cui-home' style={{marginRight: 5}}></i><strong>Test</strong> Page</AppNavbarBrand>
+
 
         <Nav className="d-md-down-none" navbar>
           <NavItem className="px-3">
@@ -68,8 +72,11 @@ class DefaultHeader extends Component {
             </DropdownMenu>
           </AppHeaderDropdown>
         </Nav>
-        <AppAsideToggler className="d-md-down-none" />
-        {/*<AppAsideToggler className="d-lg-none" mobile />*/}
+
+        <AppAsideToggler className="d-lg-none" mobile />
+
+        {/*<AppAsideToggler className="d-md-down-none" />
+          */}
       </React.Fragment>
     );
   }

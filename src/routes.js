@@ -1,10 +1,10 @@
 import React from 'react';
-import Loadable from 'react-loadable'
+import Loadable from 'react-loadable';
 
 import DefaultLayout from './containers/DefaultLayout';
 
 function Loading() {
-  return <div>Loading...</div>;
+  return (<div>Loading...</div>);
 }
 
 const Breadcrumbs = Loadable({
@@ -192,6 +192,11 @@ const Comments = Loadable({
   loading: Loading,
 });
 
+const Uploader = Loadable({
+  loader: () => import('./views/myViews/Uploader/Uploader'),
+  loading: Loading,
+});
+
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
@@ -238,6 +243,7 @@ const routes = [
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
   { path: '/posts', exact: true, name: 'Post', component: Posts },
   { path: '/comments', exact: true, name: 'Comment', component: Comments },
+  { path: '/uploader', exact: true, name: 'Uploader', component: Uploader },
 ];
 
 export default routes;

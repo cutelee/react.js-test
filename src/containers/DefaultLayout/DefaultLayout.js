@@ -55,7 +55,7 @@ class DefaultLayout extends Component {
             </Container>
           </main>
 
-          <AppAside fixed hidden>
+          <AppAside fixed display="lg">
             <DefaultAside />
           </AppAside>
         </div>

@@ -44,6 +44,11 @@ export default {
         },
       ]
     },
+    {
+      name: '사진업로드',
+      url: '/uploader',
+      icon: 'cui-cloud-upload',
+    },
 
     /*  template item
     {
