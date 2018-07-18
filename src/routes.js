@@ -197,6 +197,11 @@ const Uploader = Loadable({
   loading: Loading,
 });
 
+const Portfolio = Loadable({
+  loader: () => import('./views/myViews/Portfolio/Portfolio'),
+  loading: Loading,
+});
+
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
@@ -244,6 +249,7 @@ const routes = [
   { path: '/posts', exact: true, name: 'Post', component: Posts },
   { path: '/comments', exact: true, name: 'Comment', component: Comments },
   { path: '/uploader', exact: true, name: 'Uploader', component: Uploader },
+  { path: '/portfolio', exact: true, name: 'Portfolio', component: Portfolio }
 ];
 
 export default routes;

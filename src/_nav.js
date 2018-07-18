@@ -49,6 +49,11 @@ export default {
       url: '/uploader',
       icon: 'cui-cloud-upload',
     },
+    {
+      name: '포트폴리오',
+      url: '/portfolio',
+      icon: 'cui-cloud-upload',
+    },
 
     /*  template item
     {
