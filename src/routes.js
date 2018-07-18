@@ -202,6 +202,11 @@ const Portfolio = Loadable({
   loading: Loading,
 });
 
+const EditPortfolio = Loadable({
+  loader: () => import('./views/myViews/Portfolio/EditPortfolio'),
+  loading: Loading,
+});
+
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
@@ -249,7 +254,9 @@ const routes = [
   { path: '/posts', exact: true, name: 'Post', component: Posts },
   { path: '/comments', exact: true, name: 'Comment', component: Comments },
   { path: '/uploader', exact: true, name: 'Uploader', component: Uploader },
-  { path: '/portfolio', exact: true, name: 'Portfolio', component: Portfolio }
+  { path: '/portfolio', exact: true, name: 'Portfolio', component: Portfolio },
+  { path: '/editportfolio', exact: false, name: 'EditPortfolio', component: EditPortfolio },
+  { path: '/editportfolio/:portfolioId', exact: false, name: 'EditPortfolio', component: EditPortfolio }
 ];
 
 export default routes;
